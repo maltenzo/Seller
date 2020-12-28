@@ -8,11 +8,13 @@ namespace Seller_2._0.Clases
     {
 
         String Nombre;
-        float Precio;
+        String Categoria;
+        double Precio;
 
-        public Producto(string nombre, float precio)
+        public Producto(string nombre, string categoria, double precio)
         {
             Nombre = nombre;
+            Categoria = categoria;
             Precio = precio;
         }
 
@@ -23,18 +25,25 @@ namespace Seller_2._0.Clases
             return Nombre;
         }
 
-        public float precio()
+        public string categoria()
+        {
+            return Categoria;
+        }
+
+
+        public double precio()
         {
             return Precio;
         }
 
-        public void mod_precio(float nuevo_precio)
+        
+        public void mod_precio(double nuevo_precio)
         {
             Precio = nuevo_precio;
         }
         public void mod_porcentual(int porcentual)
         {
-            float porcentaje = (100 * porcentual) / Precio;
+            double porcentaje = (100 * porcentual) / Precio;
             Precio += porcentaje; 
         }
 

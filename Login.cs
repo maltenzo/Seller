@@ -34,5 +34,10 @@ namespace Seller_2._0
         {
             Application.Exit();
         }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

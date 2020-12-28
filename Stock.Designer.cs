@@ -38,6 +38,8 @@
             this.categoria_box = new System.Windows.Forms.TextBox();
             this.categoria = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cantidad_box = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,12 +55,13 @@
             // 
             // agregar_bt
             // 
-            this.agregar_bt.Location = new System.Drawing.Point(3, 167);
+            this.agregar_bt.Location = new System.Drawing.Point(25, 237);
             this.agregar_bt.Name = "agregar_bt";
             this.agregar_bt.Size = new System.Drawing.Size(75, 26);
             this.agregar_bt.TabIndex = 1;
             this.agregar_bt.Text = "Agregar";
             this.agregar_bt.UseVisualStyleBackColor = true;
+            this.agregar_bt.Click += new System.EventHandler(this.agregar_bt_Click);
             // 
             // name_box
             // 
@@ -128,12 +131,30 @@
             this.textBox1.Size = new System.Drawing.Size(127, 23);
             this.textBox1.TabIndex = 9;
             // 
+            // cantidad_box
+            // 
+            this.cantidad_box.Location = new System.Drawing.Point(1, 192);
+            this.cantidad_box.Name = "cantidad_box";
+            this.cantidad_box.Size = new System.Drawing.Size(129, 23);
+            this.cantidad_box.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1, 174);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 15);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Cantidad";
+            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(731, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cantidad_box);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.categoria);
             this.Controls.Add(this.categoria_box);
@@ -147,6 +168,7 @@
             this.Name = "Stock";
             this.Text = "Stock";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Stock_FormClosing);
+            this.Load += new System.EventHandler(this.Stock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -165,5 +187,7 @@
         private System.Windows.Forms.TextBox categoria_box;
         private System.Windows.Forms.Label categoria;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox cantidad_box;
+        private System.Windows.Forms.Label label1;
     }
 }
